@@ -2,13 +2,13 @@
 FROM node:alpine
 
 #Choose working directory
-WORKDIR '/app'
+WORKDIR /app
 
 #add /app/node_modules/.bin to path
 ENV PATH=/app/node_modules/.bin:$PATH
 
 #install app dependencies
-COPY /package.json .
+COPY package.json .
 RUN npm install --silent
 RUN npm install react-scripts@3.4.1 -g --silent
 
