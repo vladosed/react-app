@@ -5,7 +5,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t vladosed/react-app -f Dockerfile .
+  - docker build --tag vladosed/react-app -f Dockerfile .
 
 script:
   - docker run -e CI=true vladosed/react-app npm run test
