@@ -2,7 +2,7 @@
 FROM node:alpine
 
 #Choose working directory
-WORKDIR '/app'
+WORKDIR /app
 
 #add /app/node_modules/.bin to path
 ENV PATH=/app/node_modules/.bin:$PATH
